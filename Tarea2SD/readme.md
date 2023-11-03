@@ -3,6 +3,8 @@
 ### Ejecucion
 Usar `docker compose up` para levantar la API, KAFKA , ZOOKEEPER y POSTGRESQL.
 ### Configuracion
+Crearse una cuenta en Mailtrap y obtener las credenciales para la configuracion en nodeJS. Ya que Mailtrap solo entrega la posibilidad de enviar 100 email's se deben crear varias cuentas para realizar pruebas para multiples consultas.
+
 Para conectarse a la Base de datos:
 1. Ingresar a [PGADMIN](http://localhost/browser/)
 2. Credenciales: email: admin@admin.com && pass: admin
