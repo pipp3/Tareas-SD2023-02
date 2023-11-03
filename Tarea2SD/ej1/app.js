@@ -5,13 +5,12 @@ const { Pool, Client } = require('pg');
 const nodemailer = require('nodemailer');
 
 const connectionString = 'postgresql://root:root@postgres:5432/test';
-
 var transport = nodemailer.createTransport({
     host: "sandbox.smtp.mailtrap.io",
     port: 2525,
     auth: {
-      user: "0d167cd97ed558",
-      pass: "2216c531315046"
+      user: "26796e051b3447",
+      pass: "c06000a93177ea"
     }
   });
 
