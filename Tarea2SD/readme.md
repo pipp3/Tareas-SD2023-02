@@ -3,6 +3,11 @@
 ### Ejecucion
 Usar `docker compose up` para levantar la API, KAFKA , ZOOKEEPER y POSTGRESQL.
 ### Configuracion
+Para conectarse a la Base de datos:
+1. Ingresar a [PGADMIN](http://localhost/browser/)
+2. Credenciales: email: admin@admin.com && pass: admin
+3. Para ingresar al servidor que contiene la BDD usar: pass: root
+   
 Crear tablas:
 1. users: Crear campos id(Pk,auto incrementable),nombre, email,rut.
 2. carrito: Crear campos: id(Pk,auto incrementable),stock,usuario_id(fk).
