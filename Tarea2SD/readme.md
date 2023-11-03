@@ -1,7 +1,7 @@
 # Kafka en NodeJs y API de ventas basica
 
 ### Ejecucion
-Usar `docker compose up` para levantar la API, KAFKA , ZOOKEEPER y POSTGRESQL.
+Usar `docker compose up` para levantar la API, KAFKA , ZOOKEEPER y POSTGRESQL. Usar `docker compose up --build` si se edita el codigo dentro de app.js .
 ### Configuracion
 Crearse una cuenta en Mailtrap y obtener las credenciales para la configuracion en nodeJS. Ya que Mailtrap solo entrega la posibilidad de enviar 100 email's se deben crear varias cuentas para realizar pruebas para multiples consultas.
 
