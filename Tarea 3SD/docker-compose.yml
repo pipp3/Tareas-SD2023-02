@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  hadoop:
+    container_name: hadoop
+    build:
+      context: ./Hadoop/
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./Hadoop/examples:/home/hduser/examples
+      #- ./Hadoop/buscador:/home/hduser/buscador
+    ports:
+      - 9864:9864
+      - 9870:9870
+      - 8088:8088
+      - 9000:9000
+      - 8020:8020
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - DATABASE_HOST=127.0.0.1
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=test
+
+  pgadmin:
+      image: dpage/pgadmin4
+      environment:
+          PGADMIN_DEFAULT_EMAIL: admin@admin.com
+          PGADMIN_DEFAULT_PASSWORD: admin
+      ports:
+        - "80:80"
+      depends_on:
+        - postgres
