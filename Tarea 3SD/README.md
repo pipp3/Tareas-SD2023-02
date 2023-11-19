@@ -1,6 +1,6 @@
 ## *Tutorial Hadoop*
 
-Primero que todo se debe levantar el contenedor ``` docker compose up ```
+Primero que todo se debe levantar el contenedor ``` docker compose up ``` .
 Otro detalle de suma relevancia, si es que están en windows, deben de cambiar el interprete de crlf a lf. Los archivos que se deben cambiar son mapper.py, reducer.py y docker-entrypoint.sh .
 
 Posterior a lo anterior deben de configurar un usuario que administrará todos los comandos y por ello es necesario que sigan las siguientes instrucciones y/o comandos:
@@ -36,9 +36,8 @@ Se puede validar que efectivamente se hayan procesado dichos archivos contenidos
 ```sh
 hdfs dfs -ls input
 ```
-Con eso ya deberían de tener un seguimiento de los arhicovs traspasados al directorio input dentro administrador de archivos de Hadoop.
 
-**[4]** Se ejecutan tanto mapper y reducer puesto que hadoop trabaja con ambas.
+**[4]** Se ejecutan  mapper y reducer par el conteo de palabras de los archivos.
 ```sh
 mapred streaming -files mapper.py,reducer.py -input /user/hduser/input/*.txt -output hduser/outhadoop/ -mapper ./mapper.py -reducer ./reducer.py
 ```
