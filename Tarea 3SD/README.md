@@ -1,6 +1,6 @@
 ## *Tutorial Hadoop*
 
-Primero que todo se debe levantar el contenedor ``` docker compose up ```
+Primero que todo se debe levantar el contenedor ```sh docker compose up ```
 Otro detalle de suma relevancia, si es que están en windows, deben de cambiar el interprete de crlf a lf. Los archivos que se deben cambiar son mapper.py, reducer.py y docker-entrypoint.sh .
 
 Posterior a lo anterior deben de configurar un usuario que administrará todos los comandos y por ello es necesario que sigan las siguientes instrucciones y/o comandos:
