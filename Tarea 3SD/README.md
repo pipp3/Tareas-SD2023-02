@@ -1,14 +1,9 @@
 ## *Tutorial Hadoop*
 
 Primero que todo se debe levantar el contenedor ``` docker compose up
-```  . \
-\
-Otro detalle de suma relevancia, si es que están en windows, deben de cambiar el interprete de crlf a lf; puesto que si no lo hacen puede que les genere conflico para la lectura y ejecución de ciertos archivos al momento de realizar acciones de haddop como la sincronización de archivos sh y también archivos python en este caso que interactuan con la consola.\
-\
-**Los archivos que deben cambiar son mapper.py, reducer.py y docker-entrypoint.sh** 
+```
+Otro detalle de suma relevancia, si es que están en windows, deben de cambiar el interprete de crlf a lf. Los archivos que se deben cambiar son mapper.py, reducer.py y docker-entrypoint.sh .
 
-Ahora  lo para trabajar con hadoop usaremos comandos basicos dentro de su repertorio y esto con el modivo de que es un manejador de archivos distribuido con nombre hdfs (Hadoop Distributed Files System). \
-\
 Posterior a lo anterior deben de configurar un usuario que administrará todos los comandos y por ello es necesario que sigan las siguientes instrucciones y/o comandos:
 
 **[0]** Se accede al contenedor que contiene el servicio de hadoop:
