@@ -56,7 +56,17 @@ hdfs dfs -get /user/hduser/hduser/outhadoop/ /home/hduser/examples
 
 Como primer paso se debe estar en el directorio ``` cd ej2/ ```. Luego hay que copiar el archivo "part-00000" a la ruta de trabajo y asignarle la extension "txt".
 
-Para el segundo paso ejecutar ``` python words.py ``` que convertira el archivo de texto en un csv que solo dejara las palabras que contengas letras, asi listo para importar en la BDD. Luego ejecutaremos ``` python url.py ``` para obtner las url's de las paginas que se obtuvieron en el Paso 1 y dejarlas en un csv para importarlas a PostgreSQL.
+Para el segundo paso ejecutar ``` python words.py ``` que convertira el archivo de texto en un csv que solo dejara las palabras que contengas letras, asi listo para importar en la BDD. Luego ejecutaremos ``` python url.py ``` para obtner las url's de las paginas que se obtuvieron en el Paso 1 y dejarlas en un csv para importarlas a PostgreSQL. Como paso extra se deben crear las tablas que estime para importar los archivos CSV.
+
+## *Paso 3: API BUSCADOR DE PALABRAS*
+
+Como primer paso se debe estar en el directorio ``` cd ej1/ ```. Luego hay que ejecutar  ``` npm run start ```. OJO si se cambian los nombres de las tablas u otras configuraciones dentro de PostgreSQL se deben cambiar tambien dentro de "app.js".
+
+El segundo paso es a traves de *POSTMAN* realizar consultas a la API con la url indicada. Los resultados se veran reflejados en la misma salida de POSTMAN como json.
+
+Finalemente como dato extra aqui hay un [video](https://youtu.be/fzT1GBxbnOg) que resume la utilizacion de todo el repositorio.
+
+
 
 
 
