@@ -1,9 +1,14 @@
-## *Paso 1 MapReduce y Hadoop (contar palabras)*
+## *Paso 0: Extraer documentos de Wikipedia y guardarlos en carpetas*
 
-Primero que todo se debe levantar el contenedor ``` docker compose up ``` .
-Otro detalle de suma relevancia, si es que están en windows, deben de cambiar el interprete de crlf a lf. Los archivos que se deben cambiar son mapper.py, reducer.py y docker-entrypoint.sh .
+Para este paso se debe ejecutar ``` cd Hadoop/wikipedia ``` para ingresar al directorio donde se encuentra el codigo a ejecutar para realizar la extracion de las paginas con
+``` python wp.py ``` . Con esto se generaran las 2 carpetas con 15 archivos/paginas de wikipedia cada una. 
 
-Posterior a lo anterior deben de configurar un usuario que administrará todos los comandos y por ello es necesario que sigan las siguientes instrucciones y/o comandos:
+## *Paso 1: MapReduce y Hadoop (contar palabras)*
+
+Primero que todo se debe levantar el contenedor ``` docker compose up ``` . *Ojo se debe estar en la raiz de la carpeta*.
+Otro detalle de suma relevancia, si es que se utiliza windows, deben de cambiar el interprete de crlf a lf. Los archivos que se deben cambiar son mapper.py, reducer.py y docker-entrypoint.sh .
+
+Seguir los siguientes comandos:
 
 **[0]** Se accede al contenedor que contiene el servicio de hadoop:
 ```sh
