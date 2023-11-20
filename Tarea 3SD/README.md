@@ -48,6 +48,13 @@ mapred streaming -files mapper.py,reducer.py -input /user/hduser/input/*.txt -ou
 ```
 Luego el archivo lo exportamos al entorno local en linux dentro del contenedor y en este caso dentro del directorio examples. Allí quedará una carpeta de nombre output con un contador de palabras por archivo y en este caso sería uno general para todos los datos volcados tanto en la *carpeta1* como en la *carpeta2*. 
 
+## *Paso 2: Importar datos a PostgreSQL y obtener url's*
+
+Como primer paso se debe estar en el directorio ``` cd ej2/ ```. Luego hay que copiar el archivo "part-00000" a la ruta de trabajo y asignarle la extension "txt".
+
+Para el segundo paso ejecutar ``` python words.py ``` que convertira el archivo de texto en un csv que solo dejara las palabras que contengas letras, asi listo para importar en la BDD. Luego ejecutaremos ``` python url.py ``` para obtner las url's de las paginas que se obtuvieron en el Paso 1 y dejarlas en un csv para importarlas a PostgreSQL.
+
+
 Es aquí donde entra el uso del volumen para así extraer de forma efectiva el archivo ya procesado, por hadoop.
 ```sh
 hdfs dfs -get /user/hduser/hduser/outhadoop/ /home/hduser/examples
